@@ -48,7 +48,10 @@
     <Compile Include="Enums\CellsColors.cs" />
     <Compile Include="Interfaces\ICell.cs" />
     <Compile Include="Interfaces\IChessBoard.cs" />
+    <Compile Include="Interfaces\IChessBoardCreator.cs" />
     <Compile Include="Interfaces\IChessBoardViewer.cs" />
+    <Compile Include="Interfaces\IParser.cs" />
+    <Compile Include="Interfaces\IValidator.cs" />
     <Compile Include="Models\Cell.cs" />
     <Compile Include="Models\ChessBoard.cs" />
     <Compile Include="Program.cs" />

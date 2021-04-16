@@ -1,25 +1,24 @@
 ﻿using System;
+using ChessBoard.Interfaces;
 
 namespace ChessBoard.Services
 {
-	public class Parser
+	public class Parser : IParser
 	{
-		public int Height;
-		public int Width;
-		//string[] parseArgs;
-		//int[] parsedArgs;
-		//height = -1;
-		//width = -1;
+		public int Height { get; set; }
+		public int Width { get; set; }
 
-		public Parser(string[] args/*, out int height, out int width*/)
+		public Parser(string[] args)
 		{
-			string[] parseArgs = args;
+			IValidator validator = new Validator();
+			Parse(args, validator);
+		}
+
+		public void Parse(string[] args, IValidator validator)
+		{
 			int[] parsedArgs = new int[2];
 
-			//height = -1;
-			//width = -1;
-
-			if (Validator.FormatValidation(parseArgs, out string[] validArgs))
+			if (validator.FormatValidation(args, out string[] validArgs))
 			{
 				for (int i = 0; i < validArgs.Length; i++)
 				{
@@ -27,7 +26,7 @@ namespace ChessBoard.Services
 				}
 			}
 
-			if (Validator.SizeValidation(parsedArgs, out int[] validSizeArgs))
+			if (validator.SizeValidation(parsedArgs, out int[] validSizeArgs))
 			{
 				for (int i = 0; i < validArgs.Length; i++)
 				{

@@ -7,7 +7,7 @@ namespace ChessBoard.View
     {
         public void DrawChessBoard(IChessBoard chessboard)
         {
-            Console.WriteLine($"\n{chessboard.Height} x {chessboard.Width} Chessboard \n");
+            Console.WriteLine($"{chessboard.Height} x {chessboard.Width} Chessboard \n");
             for (int i = 0; i < chessboard.Height; i++)
             {
                 for (int j = 0; j < chessboard.Width; j++)

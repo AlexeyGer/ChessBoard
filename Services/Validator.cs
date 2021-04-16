@@ -1,11 +1,12 @@
 ﻿using System;
 using ChessBoard.Enums;
+using ChessBoard.Interfaces;
 
 namespace ChessBoard.Services
 {
-	public static class Validator
+	public class Validator : IValidator
 	{
-        public static bool FormatValidation (string[] inputArgs, out string[] validArgs)
+        public bool FormatValidation (string[] inputArgs, out string[] validArgs)
         {
             validArgs = new string[2];
     
@@ -23,7 +24,7 @@ namespace ChessBoard.Services
             return true;
         }
 
-        public static bool SizeValidation(int[] inputArgs, out int[] validSizeArgs)
+        public bool SizeValidation(int[] inputArgs, out int[] validSizeArgs)
         {
             validSizeArgs = new int[2];
 

@@ -4,13 +4,13 @@ namespace ChessBoard.Models
 {
 	public class ChessBoard : IChessBoard
 	{
-		ICell[,] cell;
+		ICell[,] cells;
 		public int Height { get; set; }
 		public int Width { get; set; }
 
-		public ChessBoard (ICell[,] cell, int height, int width)
+		public ChessBoard (ICell[,] cells, int height, int width)
 		{
-			this.cell = cell;
+			this.cells = cells;
 			Height = height;
 			Width = width;
 		}
@@ -19,13 +19,12 @@ namespace ChessBoard.Models
 		{
 			get
 			{
-				return cell[rowPosition, columnPosition];
+				return cells[rowPosition, columnPosition];
 			}
 			set
 			{
-				cell[rowPosition, columnPosition] = value;
+				cells[rowPosition, columnPosition] = value;
 			}
 		}
-
 	}
 }

@@ -2,7 +2,7 @@
 {
 	public enum CellsColors
 	{
-		White,
-		Black
+		White = ' ',
+		Black = '*'
 	}
 }
