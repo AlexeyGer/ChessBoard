@@ -1,5 +1,6 @@
 ﻿using System;
 using ChessBoard.Controllers;
+using ChessBoard.Interfaces;
 using ChessBoard.Sources;
 
 namespace ChessBoard

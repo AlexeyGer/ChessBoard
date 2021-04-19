@@ -8,9 +8,8 @@ namespace ChessBoard.Services
 		public int Height { get; set; }
 		public int Width { get; set; }
 
-		public Parser(string[] args)
+		public Parser(string[] args, IValidator validator)
 		{
-			IValidator validator = new Validator();
 			Parse(args, validator);
 		}
 
